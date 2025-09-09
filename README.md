@@ -2,6 +2,14 @@
 
 Este é um projeto de front-end desenvolvido como parte de um teste prático, que consome a API de pessoas desaparecidas da Polícia Judiciária Civil de Mato Grosso. A aplicação permite que os cidadãos consultem registros de pessoas desaparecidas ou localizadas e enviem informações adicionais que possam ajudar nas investigações.
 
+# Dados de Inscrição
+
+* [cite_start]**Nome:** Erick Rodrigues da Costa [cite: 1]
+* [cite_start]**Telefone:** (065) 99922-7352 [cite: 3]
+* [cite_start]**Email:** erickrodriguesdacosta@hotmail.com [cite: 4]
+* [cite_start]**Github:** [https://github.com/erickrodricosta](https://github.com/erickrodricosta) [cite: 5]
+* [cite_start]**Linkedin:** [https://www.linkedin.com/in/erick-rodrigues-32b336157](https://www.linkedin.com/in/erick-rodrigues-32b336157) [cite: 6]
+
 # Funcionalidades
 
 - **Consulta de Registros**: Exibe cards de pessoas desaparecidas e localizadas com paginação.
