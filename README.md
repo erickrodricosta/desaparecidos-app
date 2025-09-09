@@ -4,11 +4,11 @@ Este é um projeto de front-end desenvolvido como parte de um teste prático, qu
 
 # Dados de Inscrição
 
-* [cite_start]**Nome:** Erick Rodrigues da Costa [cite: 1]
-* [cite_start]**Telefone:** (065) 99922-7352 [cite: 3]
-* [cite_start]**Email:** erickrodriguesdacosta@hotmail.com [cite: 4]
-* [cite_start]**Github:** [https://github.com/erickrodricosta](https://github.com/erickrodricosta) [cite: 5]
-* [cite_start]**Linkedin:** [https://www.linkedin.com/in/erick-rodrigues-32b336157](https://www.linkedin.com/in/erick-rodrigues-32b336157) [cite: 6]
+* **Nome:** Erick Rodrigues da Costa 
+* **Telefone:** (065) 99922-7352
+* **Email:** erickrodriguesdacosta@hotmail.com 
+* **Github:** [https://github.com/erickrodricosta](https://github.com/erickrodricosta)
+* **Linkedin:** [https://www.linkedin.com/in/erick-rodrigues-32b336157](https://www.linkedin.com/in/erick-rodrigues-32b336157)
 
 # Funcionalidades
 
