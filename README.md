@@ -1,69 +1,71 @@
-# React + TypeScript + Vite
+# Desaparecidos MT - App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de front-end desenvolvido como parte de um teste prático, que consome a API de pessoas desaparecidas da Polícia Judiciária Civil de Mato Grosso. A aplicação permite que os cidadãos consultem registros de pessoas desaparecidas ou localizadas e enviem informações adicionais que possam ajudar nas investigações.
 
-Currently, two official plugins are available:
+# Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Consulta de Registros**: Exibe cards de pessoas desaparecidas e localizadas com paginação.
+- **Busca Avançada**: Permite a filtragem por nome, faixa etária, sexo e status (desaparecido ou localizado).
+- **Página de Detalhes**: Mostra informações completas sobre uma pessoa ao clicar em seu card, com destaque para o status.
+- **Envio de Informações**: Um formulário modal permite que o usuário envie novas informações sobre uma pessoa, como data e local onde foi vista, além da possibilidade de anexar fotos.
+- **Responsividade**: Layout adaptável para os principais tamanhos de tela.
+- **Lazy Loading**: As rotas são carregadas de forma otimizada para melhorar a performance inicial da aplicação.
 
-## Expanding the ESLint configuration
+# Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React**: Biblioteca principal para a construção da interface.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+- **Vite**: Ferramenta de build para um desenvolvimento rápido e otimizado.
+- **Tailwind CSS**: Framework CSS para estilização da aplicação.
+- **React Router DOM**: Para gerenciamento de rotas na SPA.
+- **Axios**: Cliente HTTP para consumir a API.
+- **Docker**: Para criação de um ambiente conteinerizado da aplicação.
+- **Nginx**: Servidor web utilizado no contêiner Docker para servir os arquivos estáticos.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Instalação e Execução
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Pré-requisitos
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Node.js (versão 18 ou superior)
+- npm (ou outro gerenciador de pacotes)
+- Docker (para execução com contêiner)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Execução Local
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1.  **Clone o repositório:**
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    ```bash
+    git clone [https://github.com/erickrodricosta/desaparecidos-app.git](https://github.com/erickrodricosta/desaparecidos-app.git)
+    cd desaparecidos-app
+    ```
+
+2.  **Instale as dependências:**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
+    A aplicação estará disponível em `http://localhost:5173`.
+
+### Execução com Docker
+
+1.  **Construa a imagem Docker:**
+
+    ```bash
+    docker build -t desaparecidos-app .
+    ```
+
+2.  **Execute o contêiner:**
+    ```bash
+    docker run -p 8080:80 desaparecidos-app
+    ```
+    A aplicação estará disponível em `http://localhost:8080`.
+
+# Documentação da API
+
+A documentação completa dos endpoints utilizados pode ser encontrada no seguinte endereço:
+[https://abitus-api.geia.vip/swagger-ui/index.html](https://abitus-api.geia.vip/swagger-ui/index.html)
